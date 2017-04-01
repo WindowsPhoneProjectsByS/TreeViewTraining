@@ -14,7 +14,7 @@
         <local:TreeViewPageViewModel/>
     </Page.DataContext>
 
-    <Grid Background="Coral">
+    <Grid Background="BlueViolet">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="60"/>

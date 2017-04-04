@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -27,6 +28,8 @@ namespace TreeViewTrainnig
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+
+            createTestFoldersStructure();
         }
 
         /// <summary>
@@ -43,6 +46,16 @@ namespace TreeViewTrainnig
             // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
+        }
+
+        private async void createTestFoldersStructure()
+        {
+            await ApplicationData.Current.LocalFolder.CreateFolderAsync("Darek1");
+            await ApplicationData.Current.LocalFolder.CreateFolderAsync("Darek1\\Darek1.1");
+            await ApplicationData.Current.LocalFolder.CreateFolderAsync("Darek1\\Darek1.2");
+            await ApplicationData.Current.LocalFolder.CreateFolderAsync("Darek1\\Darek1.2\\Darek1.2.1");
+            await ApplicationData.Current.LocalFolder.CreateFolderAsync("Darek1\\Darek1.2\\Darek1.2.2");
+            await ApplicationData.Current.LocalFolder.CreateFolderAsync("Darek2");
         }
     }
 }

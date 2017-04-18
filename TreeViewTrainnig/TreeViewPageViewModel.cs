@@ -47,7 +47,7 @@ namespace TreeViewTrainnig
         public TreeViewPageViewModel()
         {
             _itemId = 1;
-            TreeItems = BuildTree(5, 5);
+            TreeItems = BuildTreeMy();
             cmdTreeSelected = new RelayCommand<object>(TreeViewItemSelectionChanged);
         }
 
@@ -73,6 +73,33 @@ namespace TreeViewTrainnig
                         });
                 }
             }
+            return tree;
+        }
+
+        private ObservableCollection<TreeItemModel> BuildTreeMy()
+        {
+            var tree = new ObservableCollection<TreeItemModel>();
+
+            
+                for (int i = 0; i < 5; i++)
+                {
+                    //var d = 1;
+                    //var b = 4;
+
+                //for (int j = 0; i < 4; j++)
+                //{
+                    tree.Add(
+                        new TreeItemModel
+                        {
+                            Branch = 0,
+                            Depth = 0,
+                            Text = "Item " + _itemId++,
+                            //Children = BuildTree(d, b)
+                        });
+                //}
+                    
+                }
+            
             return tree;
         }
 

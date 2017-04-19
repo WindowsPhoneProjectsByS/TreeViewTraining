@@ -75,13 +75,32 @@ namespace TreeViewTrainnig
                 tree.Add(
                     new TreeItemModel
                     {
-                        Branch = 0,
-                        Depth = 0,
-                        Text =  section.folder.name,
-
+                        Branch = section.files.Count,
+                        Depth = 1,
+                        Text = section.folder.name,
+                        Children = prepareChildren(section)
                     });
             }
             
+            return tree;
+        }
+
+        private ObservableCollection<TreeItemModel> prepareChildren(Section section)
+        {
+            var tree = new ObservableCollection<TreeItemModel>();
+
+            foreach (Item file in section.files)
+            {
+                Debug.WriteLine("Nazwa folderu: " + section.folder.name);
+                tree.Add(
+                    new TreeItemModel
+                    {
+                        Branch = 0,
+                        Depth = 0,
+                        Text = file.name,
+                    });
+            }
+
             return tree;
         }
 
@@ -111,6 +130,8 @@ namespace TreeViewTrainnig
             IReadOnlyList<StorageFile> files = await folder.GetFilesAsync();
 
             List<Item> filesSection = new List<Item>();
+
+            Debug.WriteLine("Przygotowywanie plików dla sekcji");
 
             foreach (StorageFile file in files)
             {

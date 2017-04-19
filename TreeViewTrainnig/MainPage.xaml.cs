@@ -32,6 +32,7 @@ namespace TreeViewTrainnig
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
             //createTestFoldersStructure();
+            //createFilesInFolders();
         }
 
         /// <summary>
@@ -49,8 +50,6 @@ namespace TreeViewTrainnig
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
         }
-
-
 
         private async void createTestFoldersStructure()
         {
@@ -71,6 +70,29 @@ namespace TreeViewTrainnig
         {
             StorageFolder notesFolder = await ApplicationData.Current.LocalFolder.GetFolderAsync("Notes");
             await notesFolder.DeleteAsync(StorageDeleteOption.PermanentDelete);
+        }
+
+        private async void createFilesInFolders()
+        {
+            try
+            {
+                StorageFolder mainFolder = ApplicationData.Current.LocalFolder;
+
+                await mainFolder.CreateFileAsync("Notes\\Dziewczyna\\randka.txt");
+                Debug.WriteLine("Utworzonon plik w folderze Dziewczyna: randka.txt");
+                await mainFolder.CreateFileAsync("Notes\\Dziewczyna\\prezent.txt");
+                Debug.WriteLine("Utworzonon plik w folderze Dziewczyna: prezent.txt");
+                await mainFolder.CreateFileAsync("Notes\\Programowanie\\java.txt");
+                Debug.WriteLine("Utworzonon plik w folderze Programowanie: java.txt");
+                await mainFolder.CreateFileAsync("Notes\\Uczelnia\\stypendium.txt");
+                Debug.WriteLine("Utworzonon plik w folderze Uczelnia: stypendium.txt");
+                await mainFolder.CreateFileAsync("Notes\\Sport\\siatka.txt");
+                Debug.WriteLine("Utworzonon plik w folderze Sport: siatka.txt");
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("Problem podczas tworzenie plików w poszczególnych folderach.");
+            }
         }
 
        

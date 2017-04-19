@@ -148,59 +148,65 @@ namespace TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[25];
-            _typeNameTable[0] = "TreeViewTrainnig.TreeViewPageViewModel";
-            _typeNameTable[1] = "TreeViewTrainnig.BindableBase";
-            _typeNameTable[2] = "Object";
-            _typeNameTable[3] = "GalaSoft.MvvmLight.Command.RelayCommand`1<Object>";
-            _typeNameTable[4] = "System.Collections.ObjectModel.ObservableCollection`1<TreeViewTrainnig.TreeItemModel>";
-            _typeNameTable[5] = "System.Collections.ObjectModel.Collection`1<TreeViewTrainnig.TreeItemModel>";
-            _typeNameTable[6] = "TreeViewTrainnig.TreeItemModel";
+            _typeNameTable = new string[28];
+            _typeNameTable[0] = "TreeViewTrainnig.CreationPage";
+            _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[3] = "TreeViewTrainnig.Common.NavigationHelper";
+            _typeNameTable[4] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[5] = "TreeViewTrainnig.Common.ObservableDictionary";
+            _typeNameTable[6] = "Object";
             _typeNameTable[7] = "String";
-            _typeNameTable[8] = "Int32";
-            _typeNameTable[9] = "WinRTXamlToolkit.Controls.TreeView";
-            _typeNameTable[10] = "Windows.UI.Xaml.Controls.ItemsControl";
-            _typeNameTable[11] = "WinRTXamlToolkit.Controls.TreeViewItem";
-            _typeNameTable[12] = "WinRTXamlToolkit.Controls.HeaderedItemsControl";
-            _typeNameTable[13] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[14] = "TreeViewTrainnig.SelectionChangedTrigger";
-            _typeNameTable[15] = "System.Windows.Input.ICommand";
-            _typeNameTable[16] = "WinRTXamlToolkit.Controls.Data.DataTemplateExtensions";
-            _typeNameTable[17] = "WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate";
-            _typeNameTable[18] = "Windows.UI.Xaml.FrameworkElement";
-            _typeNameTable[19] = "Windows.UI.Xaml.Data.Binding";
-            _typeNameTable[20] = "Windows.UI.Xaml.DataTemplate";
-            _typeNameTable[21] = "Windows.UI.Xaml.Style";
-            _typeNameTable[22] = "TreeViewTrainnig.MainPage";
-            _typeNameTable[23] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[24] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[8] = "TreeViewTrainnig.TreeViewPageViewModel";
+            _typeNameTable[9] = "TreeViewTrainnig.BindableBase";
+            _typeNameTable[10] = "GalaSoft.MvvmLight.Command.RelayCommand`1<Object>";
+            _typeNameTable[11] = "System.Collections.ObjectModel.ObservableCollection`1<TreeViewTrainnig.TreeItemModel>";
+            _typeNameTable[12] = "System.Collections.ObjectModel.Collection`1<TreeViewTrainnig.TreeItemModel>";
+            _typeNameTable[13] = "TreeViewTrainnig.TreeItemModel";
+            _typeNameTable[14] = "Int32";
+            _typeNameTable[15] = "WinRTXamlToolkit.Controls.TreeView";
+            _typeNameTable[16] = "Windows.UI.Xaml.Controls.ItemsControl";
+            _typeNameTable[17] = "WinRTXamlToolkit.Controls.TreeViewItem";
+            _typeNameTable[18] = "WinRTXamlToolkit.Controls.HeaderedItemsControl";
+            _typeNameTable[19] = "TreeViewTrainnig.SelectionChangedTrigger";
+            _typeNameTable[20] = "System.Windows.Input.ICommand";
+            _typeNameTable[21] = "WinRTXamlToolkit.Controls.Data.DataTemplateExtensions";
+            _typeNameTable[22] = "WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate";
+            _typeNameTable[23] = "Windows.UI.Xaml.FrameworkElement";
+            _typeNameTable[24] = "Windows.UI.Xaml.Data.Binding";
+            _typeNameTable[25] = "Windows.UI.Xaml.DataTemplate";
+            _typeNameTable[26] = "Windows.UI.Xaml.Style";
+            _typeNameTable[27] = "TreeViewTrainnig.MainPage";
 
-            _typeTable = new global::System.Type[25];
-            _typeTable[0] = typeof(global::TreeViewTrainnig.TreeViewPageViewModel);
-            _typeTable[1] = typeof(global::TreeViewTrainnig.BindableBase);
-            _typeTable[2] = typeof(global::System.Object);
-            _typeTable[3] = typeof(global::GalaSoft.MvvmLight.Command.RelayCommand<global::System.Object>);
-            _typeTable[4] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::TreeViewTrainnig.TreeItemModel>);
-            _typeTable[5] = typeof(global::System.Collections.ObjectModel.Collection<global::TreeViewTrainnig.TreeItemModel>);
-            _typeTable[6] = typeof(global::TreeViewTrainnig.TreeItemModel);
+            _typeTable = new global::System.Type[28];
+            _typeTable[0] = typeof(global::TreeViewTrainnig.CreationPage);
+            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[3] = typeof(global::TreeViewTrainnig.Common.NavigationHelper);
+            _typeTable[4] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[5] = typeof(global::TreeViewTrainnig.Common.ObservableDictionary);
+            _typeTable[6] = typeof(global::System.Object);
             _typeTable[7] = typeof(global::System.String);
-            _typeTable[8] = typeof(global::System.Int32);
-            _typeTable[9] = typeof(global::WinRTXamlToolkit.Controls.TreeView);
-            _typeTable[10] = typeof(global::Windows.UI.Xaml.Controls.ItemsControl);
-            _typeTable[11] = typeof(global::WinRTXamlToolkit.Controls.TreeViewItem);
-            _typeTable[12] = typeof(global::WinRTXamlToolkit.Controls.HeaderedItemsControl);
-            _typeTable[13] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[14] = typeof(global::TreeViewTrainnig.SelectionChangedTrigger);
-            _typeTable[15] = typeof(global::System.Windows.Input.ICommand);
-            _typeTable[16] = typeof(global::WinRTXamlToolkit.Controls.Data.DataTemplateExtensions);
-            _typeTable[17] = typeof(global::WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate);
-            _typeTable[18] = typeof(global::Windows.UI.Xaml.FrameworkElement);
-            _typeTable[19] = typeof(global::Windows.UI.Xaml.Data.Binding);
-            _typeTable[20] = typeof(global::Windows.UI.Xaml.DataTemplate);
-            _typeTable[21] = typeof(global::Windows.UI.Xaml.Style);
-            _typeTable[22] = typeof(global::TreeViewTrainnig.MainPage);
-            _typeTable[23] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[24] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[8] = typeof(global::TreeViewTrainnig.TreeViewPageViewModel);
+            _typeTable[9] = typeof(global::TreeViewTrainnig.BindableBase);
+            _typeTable[10] = typeof(global::GalaSoft.MvvmLight.Command.RelayCommand<global::System.Object>);
+            _typeTable[11] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::TreeViewTrainnig.TreeItemModel>);
+            _typeTable[12] = typeof(global::System.Collections.ObjectModel.Collection<global::TreeViewTrainnig.TreeItemModel>);
+            _typeTable[13] = typeof(global::TreeViewTrainnig.TreeItemModel);
+            _typeTable[14] = typeof(global::System.Int32);
+            _typeTable[15] = typeof(global::WinRTXamlToolkit.Controls.TreeView);
+            _typeTable[16] = typeof(global::Windows.UI.Xaml.Controls.ItemsControl);
+            _typeTable[17] = typeof(global::WinRTXamlToolkit.Controls.TreeViewItem);
+            _typeTable[18] = typeof(global::WinRTXamlToolkit.Controls.HeaderedItemsControl);
+            _typeTable[19] = typeof(global::TreeViewTrainnig.SelectionChangedTrigger);
+            _typeTable[20] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[21] = typeof(global::WinRTXamlToolkit.Controls.Data.DataTemplateExtensions);
+            _typeTable[22] = typeof(global::WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate);
+            _typeTable[23] = typeof(global::Windows.UI.Xaml.FrameworkElement);
+            _typeTable[24] = typeof(global::Windows.UI.Xaml.Data.Binding);
+            _typeTable[25] = typeof(global::Windows.UI.Xaml.DataTemplate);
+            _typeTable[26] = typeof(global::Windows.UI.Xaml.Style);
+            _typeTable[27] = typeof(global::TreeViewTrainnig.MainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -235,22 +241,31 @@ namespace TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_TreeViewPageViewModel() { return new global::TreeViewTrainnig.TreeViewPageViewModel(); }
-        private object Activate_4_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::TreeViewTrainnig.TreeItemModel>(); }
-        private object Activate_5_Collection() { return new global::System.Collections.ObjectModel.Collection<global::TreeViewTrainnig.TreeItemModel>(); }
-        private object Activate_6_TreeItemModel() { return new global::TreeViewTrainnig.TreeItemModel(); }
-        private object Activate_9_TreeView() { return new global::WinRTXamlToolkit.Controls.TreeView(); }
-        private object Activate_11_TreeViewItem() { return new global::WinRTXamlToolkit.Controls.TreeViewItem(); }
-        private object Activate_12_HeaderedItemsControl() { return new global::WinRTXamlToolkit.Controls.HeaderedItemsControl(); }
-        private object Activate_17_HierarchicalDataTemplate() { return new global::WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate(); }
-        private object Activate_22_MainPage() { return new global::TreeViewTrainnig.MainPage(); }
-        private void VectorAdd_4_ObservableCollection(object instance, object item)
+        private object Activate_0_CreationPage() { return new global::TreeViewTrainnig.CreationPage(); }
+        private object Activate_5_ObservableDictionary() { return new global::TreeViewTrainnig.Common.ObservableDictionary(); }
+        private object Activate_8_TreeViewPageViewModel() { return new global::TreeViewTrainnig.TreeViewPageViewModel(); }
+        private object Activate_11_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::TreeViewTrainnig.TreeItemModel>(); }
+        private object Activate_12_Collection() { return new global::System.Collections.ObjectModel.Collection<global::TreeViewTrainnig.TreeItemModel>(); }
+        private object Activate_13_TreeItemModel() { return new global::TreeViewTrainnig.TreeItemModel(); }
+        private object Activate_15_TreeView() { return new global::WinRTXamlToolkit.Controls.TreeView(); }
+        private object Activate_17_TreeViewItem() { return new global::WinRTXamlToolkit.Controls.TreeViewItem(); }
+        private object Activate_18_HeaderedItemsControl() { return new global::WinRTXamlToolkit.Controls.HeaderedItemsControl(); }
+        private object Activate_22_HierarchicalDataTemplate() { return new global::WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate(); }
+        private object Activate_27_MainPage() { return new global::TreeViewTrainnig.MainPage(); }
+        private void MapAdd_5_ObservableDictionary(object instance, object key, object item)
+        {
+            var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
+            var newKey = (global::System.String)key;
+            var newItem = (global::System.Object)item;
+            collection.Add(newKey, newItem);
+        }
+        private void VectorAdd_11_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::TreeViewTrainnig.TreeItemModel>)instance;
             var newItem = (global::TreeViewTrainnig.TreeItemModel)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_5_Collection(object instance, object item)
+        private void VectorAdd_12_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::TreeViewTrainnig.TreeItemModel>)instance;
             var newItem = (global::TreeViewTrainnig.TreeItemModel)item;
@@ -267,9 +282,53 @@ namespace TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  TreeViewTrainnig.TreeViewPageViewModel
+            case 0:   //  TreeViewTrainnig.CreationPage
+                userType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_0_CreationPage;
+                userType.AddMemberName("NavigationHelper");
+                userType.AddMemberName("DefaultViewModel");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 1:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 2:   //  Windows.UI.Xaml.Controls.UserControl
+                xamlType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 3:   //  TreeViewTrainnig.Common.NavigationHelper
+                userType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 4:   //  Windows.UI.Xaml.DependencyObject
+                xamlType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 5:   //  TreeViewTrainnig.Common.ObservableDictionary
+                userType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.DictionaryAdd = MapAdd_5_ObservableDictionary;
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  Object
+                xamlType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 7:   //  String
+                xamlType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 8:   //  TreeViewTrainnig.TreeViewPageViewModel
                 userType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("TreeViewTrainnig.BindableBase"));
-                userType.Activator = Activate_0_TreeViewPageViewModel;
+                userType.Activator = Activate_8_TreeViewPageViewModel;
                 userType.AddMemberName("cmdTreeSelected");
                 userType.AddMemberName("TreeItems");
                 userType.AddMemberName("SelectedItem");
@@ -277,39 +336,35 @@ namespace TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 1:   //  TreeViewTrainnig.BindableBase
+            case 9:   //  TreeViewTrainnig.BindableBase
                 userType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 2:   //  Object
-                xamlType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 3:   //  GalaSoft.MvvmLight.Command.RelayCommand`1<Object>
+            case 10:   //  GalaSoft.MvvmLight.Command.RelayCommand`1<Object>
                 userType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 4:   //  System.Collections.ObjectModel.ObservableCollection`1<TreeViewTrainnig.TreeItemModel>
+            case 11:   //  System.Collections.ObjectModel.ObservableCollection`1<TreeViewTrainnig.TreeItemModel>
                 userType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<TreeViewTrainnig.TreeItemModel>"));
-                userType.CollectionAdd = VectorAdd_4_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_11_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 5:   //  System.Collections.ObjectModel.Collection`1<TreeViewTrainnig.TreeItemModel>
+            case 12:   //  System.Collections.ObjectModel.Collection`1<TreeViewTrainnig.TreeItemModel>
                 userType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_5_Collection;
-                userType.CollectionAdd = VectorAdd_5_Collection;
+                userType.Activator = Activate_12_Collection;
+                userType.CollectionAdd = VectorAdd_12_Collection;
                 xamlType = userType;
                 break;
 
-            case 6:   //  TreeViewTrainnig.TreeItemModel
+            case 13:   //  TreeViewTrainnig.TreeItemModel
                 userType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("TreeViewTrainnig.BindableBase"));
-                userType.Activator = Activate_6_TreeItemModel;
+                userType.Activator = Activate_13_TreeItemModel;
                 userType.AddMemberName("Text");
                 userType.AddMemberName("Depth");
                 userType.AddMemberName("Branch");
@@ -318,17 +373,13 @@ namespace TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 7:   //  String
+            case 14:   //  Int32
                 xamlType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 8:   //  Int32
-                xamlType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 9:   //  WinRTXamlToolkit.Controls.TreeView
+            case 15:   //  WinRTXamlToolkit.Controls.TreeView
                 userType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ItemsControl"));
-                userType.Activator = Activate_9_TreeView;
+                userType.Activator = Activate_15_TreeView;
                 userType.AddMemberName("SelectedItem");
                 userType.AddMemberName("SelectedValue");
                 userType.AddMemberName("SelectedValuePath");
@@ -338,27 +389,23 @@ namespace TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 10:   //  Windows.UI.Xaml.Controls.ItemsControl
+            case 16:   //  Windows.UI.Xaml.Controls.ItemsControl
                 xamlType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 11:   //  WinRTXamlToolkit.Controls.TreeViewItem
+            case 17:   //  WinRTXamlToolkit.Controls.TreeViewItem
                 userType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("WinRTXamlToolkit.Controls.HeaderedItemsControl"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 12:   //  WinRTXamlToolkit.Controls.HeaderedItemsControl
+            case 18:   //  WinRTXamlToolkit.Controls.HeaderedItemsControl
                 userType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ItemsControl"));
-                userType.Activator = Activate_12_HeaderedItemsControl;
+                userType.Activator = Activate_18_HeaderedItemsControl;
                 xamlType = userType;
                 break;
 
-            case 13:   //  Windows.UI.Xaml.DependencyObject
-                xamlType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 14:   //  TreeViewTrainnig.SelectionChangedTrigger
+            case 19:   //  TreeViewTrainnig.SelectionChangedTrigger
                 userType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.AddMemberName("Command");
                 userType.AddMemberName("CommandParamater");
@@ -366,56 +413,48 @@ namespace TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 15:   //  System.Windows.Input.ICommand
+            case 20:   //  System.Windows.Input.ICommand
                 userType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 16:   //  WinRTXamlToolkit.Controls.Data.DataTemplateExtensions
+            case 21:   //  WinRTXamlToolkit.Controls.Data.DataTemplateExtensions
                 userType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.AddMemberName("Hierarchy");
                 xamlType = userType;
                 break;
 
-            case 17:   //  WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate
+            case 22:   //  WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate
                 userType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.FrameworkElement"));
-                userType.Activator = Activate_17_HierarchicalDataTemplate;
+                userType.Activator = Activate_22_HierarchicalDataTemplate;
                 userType.AddMemberName("ItemsSource");
                 userType.AddMemberName("ItemTemplate");
                 userType.AddMemberName("ItemContainerStyle");
                 xamlType = userType;
                 break;
 
-            case 18:   //  Windows.UI.Xaml.FrameworkElement
+            case 23:   //  Windows.UI.Xaml.FrameworkElement
                 xamlType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 19:   //  Windows.UI.Xaml.Data.Binding
+            case 24:   //  Windows.UI.Xaml.Data.Binding
                 xamlType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 20:   //  Windows.UI.Xaml.DataTemplate
+            case 25:   //  Windows.UI.Xaml.DataTemplate
                 xamlType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 21:   //  Windows.UI.Xaml.Style
+            case 26:   //  Windows.UI.Xaml.Style
                 xamlType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 22:   //  TreeViewTrainnig.MainPage
+            case 27:   //  TreeViewTrainnig.MainPage
                 userType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_22_MainPage;
+                userType.Activator = Activate_27_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
-                break;
-
-            case 23:   //  Windows.UI.Xaml.Controls.Page
-                xamlType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 24:   //  Windows.UI.Xaml.Controls.UserControl
-                xamlType = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
             return xamlType;
@@ -475,162 +514,172 @@ namespace TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo
             return foundXamlType;
         }
 
-        private object get_0_TreeViewPageViewModel_cmdTreeSelected(object instance)
+        private object get_0_CreationPage_NavigationHelper(object instance)
+        {
+            var that = (global::TreeViewTrainnig.CreationPage)instance;
+            return that.NavigationHelper;
+        }
+        private object get_1_CreationPage_DefaultViewModel(object instance)
+        {
+            var that = (global::TreeViewTrainnig.CreationPage)instance;
+            return that.DefaultViewModel;
+        }
+        private object get_2_TreeViewPageViewModel_cmdTreeSelected(object instance)
         {
             var that = (global::TreeViewTrainnig.TreeViewPageViewModel)instance;
             return that.cmdTreeSelected;
         }
-        private object get_1_TreeViewPageViewModel_TreeItems(object instance)
+        private object get_3_TreeViewPageViewModel_TreeItems(object instance)
         {
             var that = (global::TreeViewTrainnig.TreeViewPageViewModel)instance;
             return that.TreeItems;
         }
-        private void set_1_TreeViewPageViewModel_TreeItems(object instance, object Value)
+        private void set_3_TreeViewPageViewModel_TreeItems(object instance, object Value)
         {
             var that = (global::TreeViewTrainnig.TreeViewPageViewModel)instance;
             that.TreeItems = (global::System.Collections.ObjectModel.ObservableCollection<global::TreeViewTrainnig.TreeItemModel>)Value;
         }
-        private object get_2_TreeItemModel_Text(object instance)
+        private object get_4_TreeItemModel_Text(object instance)
         {
             var that = (global::TreeViewTrainnig.TreeItemModel)instance;
             return that.Text;
         }
-        private void set_2_TreeItemModel_Text(object instance, object Value)
+        private void set_4_TreeItemModel_Text(object instance, object Value)
         {
             var that = (global::TreeViewTrainnig.TreeItemModel)instance;
             that.Text = (global::System.String)Value;
         }
-        private object get_3_TreeItemModel_Depth(object instance)
+        private object get_5_TreeItemModel_Depth(object instance)
         {
             var that = (global::TreeViewTrainnig.TreeItemModel)instance;
             return that.Depth;
         }
-        private void set_3_TreeItemModel_Depth(object instance, object Value)
+        private void set_5_TreeItemModel_Depth(object instance, object Value)
         {
             var that = (global::TreeViewTrainnig.TreeItemModel)instance;
             that.Depth = (global::System.Int32)Value;
         }
-        private object get_4_TreeItemModel_Branch(object instance)
+        private object get_6_TreeItemModel_Branch(object instance)
         {
             var that = (global::TreeViewTrainnig.TreeItemModel)instance;
             return that.Branch;
         }
-        private void set_4_TreeItemModel_Branch(object instance, object Value)
+        private void set_6_TreeItemModel_Branch(object instance, object Value)
         {
             var that = (global::TreeViewTrainnig.TreeItemModel)instance;
             that.Branch = (global::System.Int32)Value;
         }
-        private object get_5_TreeItemModel_Children(object instance)
+        private object get_7_TreeItemModel_Children(object instance)
         {
             var that = (global::TreeViewTrainnig.TreeItemModel)instance;
             return that.Children;
         }
-        private void set_5_TreeItemModel_Children(object instance, object Value)
+        private void set_7_TreeItemModel_Children(object instance, object Value)
         {
             var that = (global::TreeViewTrainnig.TreeItemModel)instance;
             that.Children = (global::System.Collections.ObjectModel.ObservableCollection<global::TreeViewTrainnig.TreeItemModel>)Value;
         }
-        private object get_6_TreeViewPageViewModel_SelectedItem(object instance)
+        private object get_8_TreeViewPageViewModel_SelectedItem(object instance)
         {
             var that = (global::TreeViewTrainnig.TreeViewPageViewModel)instance;
             return that.SelectedItem;
         }
-        private void set_6_TreeViewPageViewModel_SelectedItem(object instance, object Value)
+        private void set_8_TreeViewPageViewModel_SelectedItem(object instance, object Value)
         {
             var that = (global::TreeViewTrainnig.TreeViewPageViewModel)instance;
             that.SelectedItem = (global::System.String)Value;
         }
-        private object get_7_TreeView_SelectedItem(object instance)
+        private object get_9_TreeView_SelectedItem(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.TreeView)instance;
             return that.SelectedItem;
         }
-        private object get_8_TreeView_SelectedValue(object instance)
+        private object get_10_TreeView_SelectedValue(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.TreeView)instance;
             return that.SelectedValue;
         }
-        private object get_9_TreeView_SelectedValuePath(object instance)
+        private object get_11_TreeView_SelectedValuePath(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.TreeView)instance;
             return that.SelectedValuePath;
         }
-        private void set_9_TreeView_SelectedValuePath(object instance, object Value)
+        private void set_11_TreeView_SelectedValuePath(object instance, object Value)
         {
             var that = (global::WinRTXamlToolkit.Controls.TreeView)instance;
             that.SelectedValuePath = (global::System.String)Value;
         }
-        private object get_10_TreeView_SelectedContainer(object instance)
+        private object get_12_TreeView_SelectedContainer(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.TreeView)instance;
             return that.SelectedContainer;
         }
-        private object get_11_TreeView_IsExpandedBindingPath(object instance)
+        private object get_13_TreeView_IsExpandedBindingPath(object instance)
         {
             return global::WinRTXamlToolkit.Controls.TreeView.GetIsExpandedBindingPath((global::Windows.UI.Xaml.DependencyObject)instance);
         }
-        private void set_11_TreeView_IsExpandedBindingPath(object instance, object Value)
+        private void set_13_TreeView_IsExpandedBindingPath(object instance, object Value)
         {
             global::WinRTXamlToolkit.Controls.TreeView.SetIsExpandedBindingPath((global::Windows.UI.Xaml.DependencyObject)instance, (global::System.String)Value);
         }
-        private object get_12_TreeView_IsSelectedBindingPath(object instance)
+        private object get_14_TreeView_IsSelectedBindingPath(object instance)
         {
             return global::WinRTXamlToolkit.Controls.TreeView.GetIsSelectedBindingPath((global::Windows.UI.Xaml.DependencyObject)instance);
         }
-        private void set_12_TreeView_IsSelectedBindingPath(object instance, object Value)
+        private void set_14_TreeView_IsSelectedBindingPath(object instance, object Value)
         {
             global::WinRTXamlToolkit.Controls.TreeView.SetIsSelectedBindingPath((global::Windows.UI.Xaml.DependencyObject)instance, (global::System.String)Value);
         }
-        private object get_13_SelectionChangedTrigger_Command(object instance)
+        private object get_15_SelectionChangedTrigger_Command(object instance)
         {
             return global::TreeViewTrainnig.SelectionChangedTrigger.GetCommand((global::Windows.UI.Xaml.DependencyObject)instance);
         }
-        private void set_13_SelectionChangedTrigger_Command(object instance, object Value)
+        private void set_15_SelectionChangedTrigger_Command(object instance, object Value)
         {
             global::TreeViewTrainnig.SelectionChangedTrigger.SetCommand((global::Windows.UI.Xaml.DependencyObject)instance, (global::System.Windows.Input.ICommand)Value);
         }
-        private object get_14_SelectionChangedTrigger_CommandParamater(object instance)
+        private object get_16_SelectionChangedTrigger_CommandParamater(object instance)
         {
             return global::TreeViewTrainnig.SelectionChangedTrigger.GetCommandParamater((global::Windows.UI.Xaml.DependencyObject)instance);
         }
-        private void set_14_SelectionChangedTrigger_CommandParamater(object instance, object Value)
+        private void set_16_SelectionChangedTrigger_CommandParamater(object instance, object Value)
         {
             global::TreeViewTrainnig.SelectionChangedTrigger.SetCommandParamater((global::Windows.UI.Xaml.DependencyObject)instance, (global::System.Object)Value);
         }
-        private object get_15_DataTemplateExtensions_Hierarchy(object instance)
+        private object get_17_DataTemplateExtensions_Hierarchy(object instance)
         {
             return global::WinRTXamlToolkit.Controls.Data.DataTemplateExtensions.GetHierarchy((global::Windows.UI.Xaml.DependencyObject)instance);
         }
-        private void set_15_DataTemplateExtensions_Hierarchy(object instance, object Value)
+        private void set_17_DataTemplateExtensions_Hierarchy(object instance, object Value)
         {
             global::WinRTXamlToolkit.Controls.Data.DataTemplateExtensions.SetHierarchy((global::Windows.UI.Xaml.DependencyObject)instance, (global::WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate)Value);
         }
-        private object get_16_HierarchicalDataTemplate_ItemsSource(object instance)
+        private object get_18_HierarchicalDataTemplate_ItemsSource(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate)instance;
             return that.ItemsSource;
         }
-        private void set_16_HierarchicalDataTemplate_ItemsSource(object instance, object Value)
+        private void set_18_HierarchicalDataTemplate_ItemsSource(object instance, object Value)
         {
             var that = (global::WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate)instance;
             that.ItemsSource = (global::Windows.UI.Xaml.Data.Binding)Value;
         }
-        private object get_17_HierarchicalDataTemplate_ItemTemplate(object instance)
+        private object get_19_HierarchicalDataTemplate_ItemTemplate(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate)instance;
             return that.ItemTemplate;
         }
-        private void set_17_HierarchicalDataTemplate_ItemTemplate(object instance, object Value)
+        private void set_19_HierarchicalDataTemplate_ItemTemplate(object instance, object Value)
         {
             var that = (global::WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate)instance;
             that.ItemTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
-        private object get_18_HierarchicalDataTemplate_ItemContainerStyle(object instance)
+        private object get_20_HierarchicalDataTemplate_ItemContainerStyle(object instance)
         {
             var that = (global::WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate)instance;
             return that.ItemContainerStyle;
         }
-        private void set_18_HierarchicalDataTemplate_ItemContainerStyle(object instance, object Value)
+        private void set_20_HierarchicalDataTemplate_ItemContainerStyle(object instance, object Value)
         {
             var that = (global::WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate)instance;
             that.ItemContainerStyle = (global::Windows.UI.Xaml.Style)Value;
@@ -643,73 +692,85 @@ namespace TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo
 
             switch (longMemberName)
             {
+            case "TreeViewTrainnig.CreationPage.NavigationHelper":
+                userType = (global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TreeViewTrainnig.CreationPage");
+                xamlMember = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlMember(this, "NavigationHelper", "TreeViewTrainnig.Common.NavigationHelper");
+                xamlMember.Getter = get_0_CreationPage_NavigationHelper;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "TreeViewTrainnig.CreationPage.DefaultViewModel":
+                userType = (global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TreeViewTrainnig.CreationPage");
+                xamlMember = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "TreeViewTrainnig.Common.ObservableDictionary");
+                xamlMember.Getter = get_1_CreationPage_DefaultViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
             case "TreeViewTrainnig.TreeViewPageViewModel.cmdTreeSelected":
                 userType = (global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TreeViewTrainnig.TreeViewPageViewModel");
                 xamlMember = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlMember(this, "cmdTreeSelected", "GalaSoft.MvvmLight.Command.RelayCommand`1<Object>");
-                xamlMember.Getter = get_0_TreeViewPageViewModel_cmdTreeSelected;
+                xamlMember.Getter = get_2_TreeViewPageViewModel_cmdTreeSelected;
                 xamlMember.SetIsReadOnly();
                 break;
             case "TreeViewTrainnig.TreeViewPageViewModel.TreeItems":
                 userType = (global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TreeViewTrainnig.TreeViewPageViewModel");
                 xamlMember = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlMember(this, "TreeItems", "System.Collections.ObjectModel.ObservableCollection`1<TreeViewTrainnig.TreeItemModel>");
-                xamlMember.Getter = get_1_TreeViewPageViewModel_TreeItems;
-                xamlMember.Setter = set_1_TreeViewPageViewModel_TreeItems;
+                xamlMember.Getter = get_3_TreeViewPageViewModel_TreeItems;
+                xamlMember.Setter = set_3_TreeViewPageViewModel_TreeItems;
                 break;
             case "TreeViewTrainnig.TreeItemModel.Text":
                 userType = (global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TreeViewTrainnig.TreeItemModel");
                 xamlMember = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlMember(this, "Text", "String");
-                xamlMember.Getter = get_2_TreeItemModel_Text;
-                xamlMember.Setter = set_2_TreeItemModel_Text;
+                xamlMember.Getter = get_4_TreeItemModel_Text;
+                xamlMember.Setter = set_4_TreeItemModel_Text;
                 break;
             case "TreeViewTrainnig.TreeItemModel.Depth":
                 userType = (global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TreeViewTrainnig.TreeItemModel");
                 xamlMember = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlMember(this, "Depth", "Int32");
-                xamlMember.Getter = get_3_TreeItemModel_Depth;
-                xamlMember.Setter = set_3_TreeItemModel_Depth;
+                xamlMember.Getter = get_5_TreeItemModel_Depth;
+                xamlMember.Setter = set_5_TreeItemModel_Depth;
                 break;
             case "TreeViewTrainnig.TreeItemModel.Branch":
                 userType = (global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TreeViewTrainnig.TreeItemModel");
                 xamlMember = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlMember(this, "Branch", "Int32");
-                xamlMember.Getter = get_4_TreeItemModel_Branch;
-                xamlMember.Setter = set_4_TreeItemModel_Branch;
+                xamlMember.Getter = get_6_TreeItemModel_Branch;
+                xamlMember.Setter = set_6_TreeItemModel_Branch;
                 break;
             case "TreeViewTrainnig.TreeItemModel.Children":
                 userType = (global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TreeViewTrainnig.TreeItemModel");
                 xamlMember = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlMember(this, "Children", "System.Collections.ObjectModel.ObservableCollection`1<TreeViewTrainnig.TreeItemModel>");
-                xamlMember.Getter = get_5_TreeItemModel_Children;
-                xamlMember.Setter = set_5_TreeItemModel_Children;
+                xamlMember.Getter = get_7_TreeItemModel_Children;
+                xamlMember.Setter = set_7_TreeItemModel_Children;
                 break;
             case "TreeViewTrainnig.TreeViewPageViewModel.SelectedItem":
                 userType = (global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TreeViewTrainnig.TreeViewPageViewModel");
                 xamlMember = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlMember(this, "SelectedItem", "String");
-                xamlMember.Getter = get_6_TreeViewPageViewModel_SelectedItem;
-                xamlMember.Setter = set_6_TreeViewPageViewModel_SelectedItem;
+                xamlMember.Getter = get_8_TreeViewPageViewModel_SelectedItem;
+                xamlMember.Setter = set_8_TreeViewPageViewModel_SelectedItem;
                 break;
             case "WinRTXamlToolkit.Controls.TreeView.SelectedItem":
                 userType = (global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.TreeView");
                 xamlMember = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlMember(this, "SelectedItem", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_7_TreeView_SelectedItem;
+                xamlMember.Getter = get_9_TreeView_SelectedItem;
                 xamlMember.SetIsReadOnly();
                 break;
             case "WinRTXamlToolkit.Controls.TreeView.SelectedValue":
                 userType = (global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.TreeView");
                 xamlMember = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlMember(this, "SelectedValue", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_8_TreeView_SelectedValue;
+                xamlMember.Getter = get_10_TreeView_SelectedValue;
                 xamlMember.SetIsReadOnly();
                 break;
             case "WinRTXamlToolkit.Controls.TreeView.SelectedValuePath":
                 userType = (global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.TreeView");
                 xamlMember = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlMember(this, "SelectedValuePath", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_9_TreeView_SelectedValuePath;
-                xamlMember.Setter = set_9_TreeView_SelectedValuePath;
+                xamlMember.Getter = get_11_TreeView_SelectedValuePath;
+                xamlMember.Setter = set_11_TreeView_SelectedValuePath;
                 break;
             case "WinRTXamlToolkit.Controls.TreeView.SelectedContainer":
                 userType = (global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.TreeView");
                 xamlMember = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlMember(this, "SelectedContainer", "WinRTXamlToolkit.Controls.TreeViewItem");
-                xamlMember.Getter = get_10_TreeView_SelectedContainer;
+                xamlMember.Getter = get_12_TreeView_SelectedContainer;
                 xamlMember.SetIsReadOnly();
                 break;
             case "WinRTXamlToolkit.Controls.TreeView.IsExpandedBindingPath":
@@ -718,8 +779,8 @@ namespace TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_11_TreeView_IsExpandedBindingPath;
-                xamlMember.Setter = set_11_TreeView_IsExpandedBindingPath;
+                xamlMember.Getter = get_13_TreeView_IsExpandedBindingPath;
+                xamlMember.Setter = set_13_TreeView_IsExpandedBindingPath;
                 break;
             case "WinRTXamlToolkit.Controls.TreeView.IsSelectedBindingPath":
                 userType = (global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.TreeView");
@@ -727,50 +788,50 @@ namespace TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_12_TreeView_IsSelectedBindingPath;
-                xamlMember.Setter = set_12_TreeView_IsSelectedBindingPath;
+                xamlMember.Getter = get_14_TreeView_IsSelectedBindingPath;
+                xamlMember.Setter = set_14_TreeView_IsSelectedBindingPath;
                 break;
             case "TreeViewTrainnig.SelectionChangedTrigger.Command":
                 userType = (global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TreeViewTrainnig.SelectionChangedTrigger");
                 xamlMember = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlMember(this, "Command", "System.Windows.Input.ICommand");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_13_SelectionChangedTrigger_Command;
-                xamlMember.Setter = set_13_SelectionChangedTrigger_Command;
+                xamlMember.Getter = get_15_SelectionChangedTrigger_Command;
+                xamlMember.Setter = set_15_SelectionChangedTrigger_Command;
                 break;
             case "TreeViewTrainnig.SelectionChangedTrigger.CommandParamater":
                 userType = (global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType)GetXamlTypeByName("TreeViewTrainnig.SelectionChangedTrigger");
                 xamlMember = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlMember(this, "CommandParamater", "Object");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_14_SelectionChangedTrigger_CommandParamater;
-                xamlMember.Setter = set_14_SelectionChangedTrigger_CommandParamater;
+                xamlMember.Getter = get_16_SelectionChangedTrigger_CommandParamater;
+                xamlMember.Setter = set_16_SelectionChangedTrigger_CommandParamater;
                 break;
             case "WinRTXamlToolkit.Controls.Data.DataTemplateExtensions.Hierarchy":
                 userType = (global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.Data.DataTemplateExtensions");
                 xamlMember = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlMember(this, "Hierarchy", "WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_15_DataTemplateExtensions_Hierarchy;
-                xamlMember.Setter = set_15_DataTemplateExtensions_Hierarchy;
+                xamlMember.Getter = get_17_DataTemplateExtensions_Hierarchy;
+                xamlMember.Setter = set_17_DataTemplateExtensions_Hierarchy;
                 break;
             case "WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate.ItemsSource":
                 userType = (global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate");
                 xamlMember = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlMember(this, "ItemsSource", "Windows.UI.Xaml.Data.Binding");
-                xamlMember.Getter = get_16_HierarchicalDataTemplate_ItemsSource;
-                xamlMember.Setter = set_16_HierarchicalDataTemplate_ItemsSource;
+                xamlMember.Getter = get_18_HierarchicalDataTemplate_ItemsSource;
+                xamlMember.Setter = set_18_HierarchicalDataTemplate_ItemsSource;
                 break;
             case "WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate.ItemTemplate":
                 userType = (global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate");
                 xamlMember = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlMember(this, "ItemTemplate", "Windows.UI.Xaml.DataTemplate");
-                xamlMember.Getter = get_17_HierarchicalDataTemplate_ItemTemplate;
-                xamlMember.Setter = set_17_HierarchicalDataTemplate_ItemTemplate;
+                xamlMember.Getter = get_19_HierarchicalDataTemplate_ItemTemplate;
+                xamlMember.Setter = set_19_HierarchicalDataTemplate_ItemTemplate;
                 break;
             case "WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate.ItemContainerStyle":
                 userType = (global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRTXamlToolkit.Controls.Data.HierarchicalDataTemplate");
                 xamlMember = new global::TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo.XamlMember(this, "ItemContainerStyle", "Windows.UI.Xaml.Style");
-                xamlMember.Getter = get_18_HierarchicalDataTemplate_ItemContainerStyle;
-                xamlMember.Setter = set_18_HierarchicalDataTemplate_ItemContainerStyle;
+                xamlMember.Getter = get_20_HierarchicalDataTemplate_ItemContainerStyle;
+                xamlMember.Setter = set_20_HierarchicalDataTemplate_ItemContainerStyle;
                 break;
             }
             return xamlMember;
@@ -1097,5 +1158,6 @@ namespace TreeViewTrainnig.TreeViewTrainnig_XamlTypeInfo
         }
     }
 }
+
 
 

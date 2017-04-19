@@ -48,17 +48,27 @@ namespace TreeViewTrainnig
             }
         }
 
+        public static CapsuleInfo capsuleInfo = new CapsuleInfo();
+
         public TreeViewPageViewModel()
         {
             _itemId = 1;
-            prepareApplication();
+            fillTreeViewValues();
+            cmdTreeSelected = new RelayCommand<object>(TreeViewItemSelectionChanged);
+            sections = new List<Section>();
+            prepareCapsuleInfo();
         }
 
-        public async void prepareApplication()
+        public async void fillTreeViewValues()
         {
             await prepareViewModel();
             TreeItems = BuildTreeMy();
-            cmdTreeSelected = new RelayCommand<object>(TreeViewItemSelectionChanged);
+        }
+
+        private void prepareCapsuleInfo()
+        {
+            capsuleInfo.type = ItemType.Type.Main;
+            capsuleInfo.localization = "Notes";
         }
 
         private ObservableCollection<TreeItemModel> BuildTreeMy()
@@ -67,7 +77,17 @@ namespace TreeViewTrainnig
 
             Debug.WriteLine("Budowanie drzewa");
             Debug.WriteLine("Ilość sekcji: " + sections.Count);
-                
+
+            tree.Add(
+                new TreeItemModel
+                {
+                    Branch = 0,
+                    Depth = 0,
+                    Text = "/",
+                    localization = "Notes",
+                    type = ItemType.Type.Main,
+                }
+            );
 
             foreach (Section section in sections)
             {
@@ -78,6 +98,8 @@ namespace TreeViewTrainnig
                         Branch = section.files.Count,
                         Depth = 1,
                         Text = section.folder.name,
+                        localization = section.folder.localization,
+                        type = ItemType.Type.Folder,
                         Children = prepareChildren(section)
                     });
             }
@@ -97,6 +119,8 @@ namespace TreeViewTrainnig
                     {
                         Branch = 0,
                         Depth = 0,
+                        localization = file.localization,
+                        type = ItemType.Type.File,
                         Text = file.name,
                     });
             }
@@ -138,9 +162,9 @@ namespace TreeViewTrainnig
                 Item item = new Item();
                 item.name = file.Name;
                 item.type = ItemType.Type.File;
-                Debug.WriteLine(file.FileType);
-                item.localization = "Notes\\" + folder.Name + "\\" + file.Name + "." + file.FileType;
 
+                item.localization = "Notes\\" + folder.Name + "\\" + file.Name;
+                Debug.WriteLine(item.localization);
                 filesSection.Add(item);
             }
 
@@ -158,7 +182,10 @@ namespace TreeViewTrainnig
                     if (itmObj.Depth == 0)
                         itmObj.Branch = 0;
 
-                    SelectedItem = itmObj.Text.ToString() + " is in position " + itmObj.Depth + " having " + itmObj.Branch + " Branches.";
+                    SelectedItem = itmObj.Text.ToString() + ", lokalizacja: " + itmObj.localization;
+
+                    capsuleInfo.type = itmObj.type;
+                    capsuleInfo.localization = itmObj.localization;
                 }
             }
         }

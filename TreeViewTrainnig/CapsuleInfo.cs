@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace TreeViewTrainnig
 {
-    public class ItemType
+    public class CapsuleInfo
     {
-       public enum Type { File, Folder, Main };
+        public ItemType.Type type;
+        public String localization;
     }
 }

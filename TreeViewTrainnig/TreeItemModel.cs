@@ -61,5 +61,8 @@ namespace TreeViewTrainnig
             set { this.SetProperty(ref _children, value); }
         }
         #endregion
+
+        public ItemType.Type type;
+        public String localization;
     }
 }

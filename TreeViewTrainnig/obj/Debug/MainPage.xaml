@@ -16,11 +16,11 @@
 
     <Grid Background="Coral">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
 
-        <xc:TreeView 
+        <xc:TreeView Grid.Row="0"
             x:Name="tvDataBound" 
             ItemsSource="{Binding TreeItems}" 
             local:SelectionChangedTrigger.Command="{Binding cmdTreeSelected}" 
@@ -35,7 +35,42 @@
                 </DataTemplate>
             </xc:TreeView.ItemTemplate>
         </xc:TreeView>
-        <TextBlock Grid.Row="1" Text="{Binding SelectedItem}" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Padding="10" Grid.Column="0" Grid.Row="0">
+                <StackPanel VerticalAlignment="Center">
+                    <Button x:ConnectionId='1' x:Name="CreateButton" Content="Dodaj" FontSize="25"
+                        Padding="10"                              HorizontalAlignment="Stretch"/>
+                </StackPanel>
+            </Border>
+            <Border Padding="10" Grid.Column="1" Grid.Row="0">
+                <StackPanel VerticalAlignment="Center">
+                    <Button x:Name="ChangeNameButton" Content="Zmięń nazwę" FontSize="25"
+                             Padding="10" HorizontalAlignment="Stretch"/>
+                </StackPanel>
+            </Border>
+            <Border Padding="10" Grid.Column="0" Grid.Row="1">
+                <StackPanel VerticalAlignment="Center">
+                    <Button x:Name="DeleteButton" Content="Usuń" FontSize="25"
+                            Padding="10" HorizontalAlignment="Stretch"/>
+                </StackPanel>
+            </Border>
+            <Border Padding="10" Grid.Column="1" Grid.Row="1">
+                <StackPanel >
+                    <Button x:Name="ShowButton" Content="Pokaż" FontSize="25"
+                             Padding="10" HorizontalAlignment="Stretch"/>
+                </StackPanel>
+            </Border>
+        </Grid>
     </Grid>
 </Page>
 

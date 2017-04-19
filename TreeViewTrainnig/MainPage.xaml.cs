@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -29,7 +31,7 @@ namespace TreeViewTrainnig
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
-            createTestFoldersStructure();
+            //createTestFoldersStructure();
         }
 
         /// <summary>
@@ -48,14 +50,29 @@ namespace TreeViewTrainnig
             // this event is handled for you.
         }
 
+
+
         private async void createTestFoldersStructure()
         {
-            await ApplicationData.Current.LocalFolder.CreateFolderAsync("Notes\\Darek1");
-            await ApplicationData.Current.LocalFolder.CreateFolderAsync("Notes\\Darek1\\Darek1.1");
-            await ApplicationData.Current.LocalFolder.CreateFolderAsync("Notes\\Darek1\\Darek1.2");
-            await ApplicationData.Current.LocalFolder.CreateFolderAsync("Notes\\Darek1\\Darek1.2\\Darek1.2.1");
-            await ApplicationData.Current.LocalFolder.CreateFolderAsync("Notes\\Darek1\\Darek1.2\\Darek1.2.2");
-            await ApplicationData.Current.LocalFolder.CreateFolderAsync("Notes\\Darek2");
+            try
+            {
+                await ApplicationData.Current.LocalFolder.CreateFolderAsync("Notes\\Sport");
+                await ApplicationData.Current.LocalFolder.CreateFolderAsync("Notes\\Programowanie");
+                await ApplicationData.Current.LocalFolder.CreateFolderAsync("Notes\\Uczelnia");
+                await ApplicationData.Current.LocalFolder.CreateFolderAsync("Notes\\Dziewczyna");
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("Nie udało utoworzyć się folderów: ");
+            }
         }
+
+        private async void deleteAllFolders()
+        {
+            StorageFolder notesFolder = await ApplicationData.Current.LocalFolder.GetFolderAsync("Notes");
+            await notesFolder.DeleteAsync(StorageDeleteOption.PermanentDelete);
+        }
+
+       
     }
 }

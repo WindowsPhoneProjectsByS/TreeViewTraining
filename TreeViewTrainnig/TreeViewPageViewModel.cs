@@ -3,9 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Storage;
 using WinRTXamlToolkit.Tools;
 
 namespace TreeViewTrainnig
@@ -16,6 +18,8 @@ namespace TreeViewTrainnig
 
         private int _itemId;
         private Random _rand = new Random();
+
+        private List<Section> sections = new List<Section>();
 
         #region TreeItems 
         private ObservableCollection<TreeItemModel> _treeItems;
@@ -47,60 +51,79 @@ namespace TreeViewTrainnig
         public TreeViewPageViewModel()
         {
             _itemId = 1;
-            TreeItems = BuildTreeMy();
-            cmdTreeSelected = new RelayCommand<object>(TreeViewItemSelectionChanged);
+            prepareApplication();
         }
 
-        private ObservableCollection<TreeItemModel> BuildTree(int depth, int branches)
+        public async void prepareApplication()
         {
-            var tree = new ObservableCollection<TreeItemModel>();
-
-            if (depth > 0)
-            {
-                var depthIndices = Enumerable.Range(0, branches).Shuffle();
-
-                for (int i = 0; i < branches; i++)
-                {
-                    var d = depthIndices[i] % depth;
-                    var b = _rand.Next(branches / 2, branches);
-                    tree.Add(
-                        new TreeItemModel
-                        {
-                            Branch = b,
-                            Depth = d,
-                            Text = "Item " + _itemId++,
-                            Children = BuildTree(d, b)
-                        });
-                }
-            }
-            return tree;
+            await prepareViewModel();
+            TreeItems = BuildTreeMy();
+            cmdTreeSelected = new RelayCommand<object>(TreeViewItemSelectionChanged);
         }
 
         private ObservableCollection<TreeItemModel> BuildTreeMy()
         {
             var tree = new ObservableCollection<TreeItemModel>();
 
-            
-                for (int i = 0; i < 5; i++)
-                {
-                    //var d = 1;
-                    //var b = 4;
+            Debug.WriteLine("Budowanie drzewa");
+            Debug.WriteLine("Ilość sekcji: " + sections.Count);
+                
 
-                //for (int j = 0; i < 4; j++)
-                //{
-                    tree.Add(
-                        new TreeItemModel
-                        {
-                            Branch = 0,
-                            Depth = 0,
-                            Text = "Item " + _itemId++,
-                            //Children = BuildTree(d, b)
-                        });
-                //}
-                    
-                }
+            foreach (Section section in sections)
+            {
+                Debug.WriteLine("Nazwa folderu: " + section.folder.name);
+                tree.Add(
+                    new TreeItemModel
+                    {
+                        Branch = 0,
+                        Depth = 0,
+                        Text =  section.folder.name,
+
+                    });
+            }
             
             return tree;
+        }
+
+        private async Task prepareViewModel()
+        {
+
+            StorageFolder notesFolder = await ApplicationData.Current.LocalFolder.GetFolderAsync("Notes");
+            IReadOnlyList<StorageFolder> folders = await notesFolder.GetFoldersAsync();
+
+            Debug.WriteLine("Ilość folderów: " + folders.Count);
+
+            Debug.WriteLine("Analiza folderów: ");
+
+            foreach (StorageFolder folder in folders)
+            {
+                Section section = new Section();
+                section.folder.name = folder.Name;
+                section.folder.localization = "Notes\\" + folder.Name;
+                section.folder.type = ItemType.Type.Folder;
+                section.files = await prepareFilesForFolder(folder);
+                sections.Add(section);
+            }
+        }
+
+        private async Task<List<Item>> prepareFilesForFolder(StorageFolder folder)
+        {
+            IReadOnlyList<StorageFile> files = await folder.GetFilesAsync();
+
+            List<Item> filesSection = new List<Item>();
+
+            foreach (StorageFile file in files)
+            {
+                Item item = new Item();
+                item.name = file.Name;
+                item.type = ItemType.Type.File;
+                Debug.WriteLine(file.FileType);
+                item.localization = "Notes\\" + folder.Name + "\\" + file.Name + "." + file.FileType;
+
+                filesSection.Add(item);
+            }
+
+            return filesSection;
         }
 
         private void TreeViewItemSelectionChanged(object itm)

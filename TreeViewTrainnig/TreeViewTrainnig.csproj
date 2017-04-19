@@ -83,10 +83,13 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="BindableBase.cs" />
+    <Compile Include="ItemType.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="Section.cs" />
     <Compile Include="SelectionChangedTrigger.cs" />
     <Compile Include="TreeItemModel.cs" />
     <Compile Include="TreeViewPageViewModel.cs" />

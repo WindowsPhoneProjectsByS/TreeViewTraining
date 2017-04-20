@@ -56,11 +56,4 @@ C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeVie
 C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\CreationPage.g.cs
 C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\CreationPage.xaml
 C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\CreationPage.xbf
-C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles
-C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles.intermediate
-C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\Microsoft.Practices.ServiceLocation\Resources.resfiles
-C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\Microsoft.Practices.ServiceLocation\Resources.resfiles.intermediate
-C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\Microsoft.Practices.ServiceLocation\pri.resfiles
-C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\Microsoft.Practices.ServiceLocation\pri.resfiles.intermediate
-C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\Microsoft.Practices.ServiceLocation\priconfig.xml
-C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\Microsoft.Practices.ServiceLocation\priconfig.xml.intermediate
+C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\TreeViewTrainnig.csprojResolveAssemblyReference.cache

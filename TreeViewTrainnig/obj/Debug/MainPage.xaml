@@ -11,7 +11,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Page.DataContext>
-        <local:TreeViewPageViewModel/>
+        <local:TreeViewPageViewModel x:Name="TreeViewPageModel"/>
     </Page.DataContext>
 
     <Grid Background="Coral">
@@ -48,7 +48,7 @@
 
             <Border Padding="10" Grid.Column="0" Grid.Row="0">
                 <StackPanel VerticalAlignment="Center">
-                    <Button x:ConnectionId='1' x:Name="CreateButton" Content="Dodaj" FontSize="25"
+                    <Button x:ConnectionId='2' x:Name="CreateButton" Content="Dodaj" FontSize="25"
                         Padding="10"                              HorizontalAlignment="Stretch"/>
                 </StackPanel>
             </Border>
@@ -60,8 +60,8 @@
             </Border>
             <Border Padding="10" Grid.Column="0" Grid.Row="1">
                 <StackPanel VerticalAlignment="Center">
-                    <Button x:Name="DeleteButton" Content="Usuń" FontSize="25"
-                            Padding="10" HorizontalAlignment="Stretch"/>
+                    <Button x:ConnectionId='1' x:Name="DeleteButton" Content="Usuń" FontSize="25"
+                            Padding="10" HorizontalAlignment="Stretch"                           />
                 </StackPanel>
             </Border>
             <Border Padding="10" Grid.Column="1" Grid.Row="1">

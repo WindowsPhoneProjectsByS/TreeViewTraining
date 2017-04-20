@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
@@ -108,32 +109,55 @@ namespace TreeViewTrainnig
             DeleteFileOrFolder(); 
         }
 
-        private void DeleteFileOrFolder()
+        private async void DeleteFileOrFolder()
         {
             ItemType.Type type = TreeViewPageViewModel.capsuleInfo.type;
 
             switch (type)
             {
                 case ItemType.Type.File:
+                    await DeleteFile();
                     break;
                 case ItemType.Type.Folder:
+                    await DeleteFolder();
                     break;
                 case ItemType.Type.Main:
                     break;
             }
+
+            Debug.WriteLine("Usuwanie itemu zakończone.");
         }
 
-        private void DelteteFile()
+        private async Task DeleteFile()
         {
-
+            
         }
 
-        private void DeleteFolder()
+        private async Task DeleteFolder()
         {
-
+            string localization = TreeViewPageViewModel.capsuleInfo.localization;
+            Debug.WriteLine("Usuwanie folderu");
+            try
+            {
+                StorageFolder folder = await ApplicationData.Current.LocalFolder.GetFolderAsync(localization);
+                await folder.DeleteAsync(StorageDeleteOption.PermanentDelete);
+                Debug.WriteLine("Odświeżanie kontentu tree view");
+                if (TreeViewPageModel == null)
+                {
+                    Debug.WriteLine("TreeViewPageModel jest pusty");
+                }
+                //TreeViewPageModel.fillTreeViewValues();
+            }
+            catch (IOException e)
+            {
+                Debug.WriteLine("Nie udało usunąć się folderu.");
+                MessageDialog msg = new MessageDialog("Nie udało się usunąć folderu: " + e.Message);
+                await msg.ShowAsync();
+            }
+            
         }
 
-        private void DeleteAll()
+        private async void DeleteAll()
         {
 
         }

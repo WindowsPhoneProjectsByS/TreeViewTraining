@@ -129,9 +129,9 @@ namespace TreeViewTrainnig
             return tree;
         }
 
-        private async Task prepareViewModel()
+        public async Task prepareViewModel()
         {
-
+            Debug.WriteLine("Przygotowywanie widoku dla tree view.");
             StorageFolder notesFolder = await ApplicationData.Current.LocalFolder.GetFolderAsync("Notes");
             IReadOnlyList<StorageFolder> folders = await notesFolder.GetFoldersAsync();
 

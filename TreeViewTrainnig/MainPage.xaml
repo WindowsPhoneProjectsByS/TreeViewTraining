@@ -11,7 +11,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Page.DataContext>
-        <local:TreeViewPageViewModel/>
+        <local:TreeViewPageViewModel x:Name="TreeViewPageModel"/>
     </Page.DataContext>
 
     <Grid Background="Coral">

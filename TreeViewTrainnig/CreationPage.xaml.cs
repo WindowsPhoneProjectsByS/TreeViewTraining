@@ -198,8 +198,9 @@ namespace TreeViewTrainnig
             try
             {
                 string newName = NewName.Text + ".txt";
-                await folder.CreateFileAsync(newName);
+                StorageFile file = await folder.CreateFileAsync(newName);
                 DisplayWarningMessage("Utworzono plik");
+                await FileIO.WriteTextAsync(file, NoteContent.Text);
             }
             catch (Exception e)
             {

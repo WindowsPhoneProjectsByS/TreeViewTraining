@@ -61,7 +61,7 @@
             <Border Padding="10" Grid.Column="0" Grid.Row="1">
                 <StackPanel VerticalAlignment="Center">
                     <Button x:Name="DeleteButton" Content="Usuń" FontSize="25"
-                            Padding="10" HorizontalAlignment="Stretch"/>
+                            Padding="10" HorizontalAlignment="Stretch" Click="DeleteButton_Click"/>
                 </StackPanel>
             </Border>
             <Border Padding="10" Grid.Column="1" Grid.Row="1">

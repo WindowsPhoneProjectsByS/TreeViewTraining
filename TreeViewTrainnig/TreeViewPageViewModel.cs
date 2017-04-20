@@ -69,6 +69,7 @@ namespace TreeViewTrainnig
         {
             capsuleInfo.type = ItemType.Type.Main;
             capsuleInfo.localization = "Notes";
+            capsuleInfo.name = "";
         }
 
         private ObservableCollection<TreeItemModel> BuildTreeMy()
@@ -186,6 +187,7 @@ namespace TreeViewTrainnig
 
                     capsuleInfo.type = itmObj.type;
                     capsuleInfo.localization = itmObj.localization;
+                    capsuleInfo.name = itmObj.Text;
                 }
             }
         }

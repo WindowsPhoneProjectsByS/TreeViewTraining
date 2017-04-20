@@ -9,6 +9,7 @@ namespace TreeViewTrainnig
     public class CapsuleInfo
     {
         public ItemType.Type type;
+        public string name;
         public String localization;
     }
 }

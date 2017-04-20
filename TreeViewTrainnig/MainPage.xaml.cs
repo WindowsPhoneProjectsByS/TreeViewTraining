@@ -29,7 +29,7 @@ namespace TreeViewTrainnig
         {
             this.InitializeComponent();
 
-            this.NavigationCacheMode = NavigationCacheMode.Required;
+            this.NavigationCacheMode = NavigationCacheMode.Disabled;
 
             //createTestFoldersStructure();
             //createFilesInFolders();
@@ -103,6 +103,41 @@ namespace TreeViewTrainnig
             }
         }
 
-       
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteFileOrFolder(); 
+        }
+
+        private void DeleteFileOrFolder()
+        {
+            ItemType.Type type = TreeViewPageViewModel.capsuleInfo.type;
+
+            switch (type)
+            {
+                case ItemType.Type.File:
+                    break;
+                case ItemType.Type.Folder:
+                    break;
+                case ItemType.Type.Main:
+                    break;
+            }
+        }
+
+        private void DelteteFile()
+        {
+
+        }
+
+        private void DeleteFolder()
+        {
+
+        }
+
+        private void DeleteAll()
+        {
+
+        }
+
+
     }
 }

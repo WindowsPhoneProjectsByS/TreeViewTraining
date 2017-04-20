@@ -29,7 +29,20 @@
 
         <!--TODO: Content should be placed within the following grid-->
         <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
+                <TextBlock Text="Lokalizacja" x:Name="LocalizationDisplay" Grid.Row="0" FontSize="25"/>
+                <TextBlock Text="Nazwa" Grid.Row="1" FontSize="25"/>
+                <TextBox x:Name="NewName" Grid.Row="2"/>
+                <Button x:Name="SaveButton" Grid.Row="30" Content="Zapisz" HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Bottom" Click="SaveButton_Click"/>
+            </Grid>
         </Grid>
     </Grid>
 </Page>

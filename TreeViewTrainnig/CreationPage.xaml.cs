@@ -15,6 +15,11 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Text.RegularExpressions;
+using Windows.UI.Popups;
+using Windows.Storage;
+using System.Diagnostics;
+using System.Threading.Tasks;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -101,6 +106,7 @@ namespace TreeViewTrainnig
         {
             this.navigationHelper.OnNavigatedTo(e);
             SetProperTitleInfo();
+            SetProperLocalizationDisplay();
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -122,41 +128,113 @@ namespace TreeViewTrainnig
                     TitleInfo.Text = "Utwórz katalog";
                     break;
                 default:
-                    DefaultTypeAction();
+                    DefaultAction();
                     break;
             }
         }
 
+        private void SetProperLocalizationDisplay()
+        {
+            LocalizationDisplay.Text = "Lokalizacja: " + TreeViewPageViewModel.capsuleInfo.localization.ToString();
+        }
 
-        private void ChooseProperAction()
+
+        private async void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+           bool condition = checkCorrectionTitle();
+            if (condition)
+            {
+                ChooseProperAction();
+            }
+            else
+            {
+                MessageDialog msg = new MessageDialog("Nazwa zawiera znaki niedozwolone.");
+                await msg.ShowAsync();
+            }
+        }
+
+        private async void ChooseProperAction()
         {
             switch (TreeViewPageViewModel.capsuleInfo.type)
             {
-                case ItemType.Type.File:
-                    FileTypeAction();
-                    break;
                 case ItemType.Type.Folder:
-                    FolderTypeAction();
+                    await CreationFileAction();
+                    break;
+                case ItemType.Type.Main:
+                    await CreationFolderAction();
                     break;
                 default:
-                    DefaultTypeAction();
+                    DefaultAction();
                     break;
             }
         }
 
-        private void DefaultTypeAction()
+        private void DefaultAction()
         {
 
         }
 
-        private void FileTypeAction()
+        private async Task CreationFileAction()
         {
-
+            string localization = TreeViewPageViewModel.capsuleInfo.localization;
+            StorageFolder folder = await ApplicationData.Current.LocalFolder.GetFolderAsync(localization);
+            Debug.WriteLine("Nazwa pobranego folderu: " + folder.Name);
+            try
+            {
+                string newName = NewName.Text + ".txt";
+                await folder.CreateFileAsync(newName);
+                DisplayWarningMessage("Utworzono plik");
+            }
+            catch (Exception e)
+            {
+                DisplayWarningMessage("Problem z utworzeniem pliku.");
+                Debug.WriteLine("Problem z utworzeniem pliku");
+            }
         }
 
-        private void FolderTypeAction()
+        private async Task CreationFolderAction()
         {
-
+            string localization = TreeViewPageViewModel.capsuleInfo.localization;
+            StorageFolder folder = await ApplicationData.Current.LocalFolder.GetFolderAsync(localization);
+            Debug.WriteLine("Nazwa pobranego folderu: " + folder.Name);
+            try
+            {
+                string newName = NewName.Text;
+                Debug.WriteLine("Próba utworzenia folderu.");
+                await folder.CreateFolderAsync(newName);
+                Debug.WriteLine("Utworzono folder.");
+                DisplayWarningMessage("Utworzono folder");
+            }
+            catch (Exception e)
+            {
+                DisplayWarningMessage("Problem z utworzeniem folderu.");
+                Debug.WriteLine("Problem z utworzeniem folder");
+            }
         }
+
+        private bool checkCorrectionTitle()
+        {
+            string newName = NewName.Text;
+            Regex regex = new Regex("^[a-zA-Z0-9]+$");
+            Match match = regex.Match(newName);
+
+            bool condition = false;
+
+            if (match.Success)
+            {
+                condition = true;
+            }
+
+            return condition;
+        }
+
+        private async void DisplayWarningMessage(string text)
+        {
+            MessageDialog msg = new MessageDialog(text);
+            await msg.ShowAsync();
+        }
+
+
+
     }
 }

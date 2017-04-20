@@ -1,4 +1,3 @@
-c:\users\dariuszn\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\TreeViewTrainnig.csprojResolveAssemblyReference.cache
 c:\users\dariuszn\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\App.g.i.cs
 c:\users\dariuszn\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\App.g.cs
 c:\users\dariuszn\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\MainPage.g.i.cs

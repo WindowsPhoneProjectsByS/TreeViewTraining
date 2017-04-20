@@ -34,14 +34,18 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
                 <TextBlock Text="Lokalizacja" x:Name="LocalizationDisplay" Grid.Row="0" FontSize="25"/>
                 <TextBlock Text="Nazwa" Grid.Row="1" FontSize="25"/>
                 <TextBox x:Name="NewName" Grid.Row="2"/>
-                <Button x:ConnectionId='1' x:Name="SaveButton" Grid.Row="30" Content="Zapisz" HorizontalAlignment="Stretch" 
-                        VerticalAlignment="Bottom"                         />
+                <TextBlock Grid.Row="3" Text="Zawartość" FontSize="25"/>
+                <TextBox x:Name="NoteContent" Grid.Row="4" VerticalAlignment="Stretch"/>
+                <Button x:ConnectionId='1' x:Name="SaveButton" Grid.Row="5" Content="Zapisz" HorizontalAlignment="Stretch" 
+                        VerticalAlignment="Bottom"                          Padding="10" FontSize="20"/>
             </Grid>
         </Grid>
     </Grid>

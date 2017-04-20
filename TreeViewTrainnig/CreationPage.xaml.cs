@@ -107,6 +107,7 @@ namespace TreeViewTrainnig
             this.navigationHelper.OnNavigatedTo(e);
             SetProperTitleInfo();
             SetProperLocalizationDisplay();
+            EnbDisNoteContent();
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -138,10 +139,25 @@ namespace TreeViewTrainnig
             LocalizationDisplay.Text = "Lokalizacja: " + TreeViewPageViewModel.capsuleInfo.localization.ToString();
         }
 
+        private void EnbDisNoteContent()
+        {
+            
+            if (TreeViewPageViewModel.capsuleInfo.type == ItemType.Type.Main)
+            {
+                NoteContent.Visibility = Visibility.Collapsed;
+                Debug.WriteLine("Ustawiono NoteContent.Visibility to collapsed");
+            }
+            else
+            {
+                NoteContent.Visibility = Visibility.Visible;
+                Debug.WriteLine("Element NoteContent.Visibility pozostał bez zmian");
+            }
+        }
+
 
         private async void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-           bool condition = checkCorrectionTitle();
+           bool condition = CheckCorrectionTitle();
             if (condition)
             {
                 ChooseProperAction();
@@ -212,7 +228,7 @@ namespace TreeViewTrainnig
             }
         }
 
-        private bool checkCorrectionTitle()
+        private bool CheckCorrectionTitle()
         {
             string newName = NewName.Text;
             Regex regex = new Regex("^[a-zA-Z0-9]+$");

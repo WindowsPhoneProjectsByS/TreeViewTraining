@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Views;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -26,11 +27,15 @@ namespace TreeViewTrainnig
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        //TreeViewPageViewModel treeViewModel = new TreeViewPageViewModel();
+
         public MainPage()
         {
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Disabled;
+
+            //tvDataBound.ItemsSource = treeViewModel.TreeItems;
 
             //createTestFoldersStructure();
             //createFilesInFolders();
@@ -54,7 +59,7 @@ namespace TreeViewTrainnig
             }
             else
             {
-                MessageDialog msgDialog = new MessageDialog("Nie dozwolona operacja dodania dla pliku.");
+                MessageDialog msgDialog = new MessageDialog("Nie dozwolona operacja. Zmień wybór na folder lub folder główny.");
                 await msgDialog.ShowAsync();
             }         
         }
@@ -130,7 +135,23 @@ namespace TreeViewTrainnig
 
         private async Task DeleteFile()
         {
-            
+            string localizationWithName = TreeViewPageViewModel.capsuleInfo.localization;
+            Debug.WriteLine("Usuwanie pliku: " + localizationWithName);
+            try
+            {
+                StorageFile file = await ApplicationData.Current.LocalFolder.GetFileAsync(localizationWithName);
+                await file.DeleteAsync(StorageDeleteOption.PermanentDelete);
+                Debug.WriteLine("Odświeżanie kontentu tree view");
+
+                RefreshPage();
+            }
+            catch (IOException e)
+            {
+                Debug.WriteLine("Nie udało usunąć się pliku.");
+                MessageDialog msg = new MessageDialog("Nie udało się usunąć pliku: " + e.Message);
+                await msg.ShowAsync();
+            }
+
         }
 
         private async Task DeleteFolder()
@@ -142,11 +163,8 @@ namespace TreeViewTrainnig
                 StorageFolder folder = await ApplicationData.Current.LocalFolder.GetFolderAsync(localization);
                 await folder.DeleteAsync(StorageDeleteOption.PermanentDelete);
                 Debug.WriteLine("Odświeżanie kontentu tree view");
-                if (TreeViewPageModel == null)
-                {
-                    Debug.WriteLine("TreeViewPageModel jest pusty");
-                }
-                //TreeViewPageModel.fillTreeViewValues();
+
+                RefreshPage();
             }
             catch (IOException e)
             {
@@ -162,6 +180,12 @@ namespace TreeViewTrainnig
 
         }
 
+        private void RefreshPage()
+        {
+            var Frame = Window.Current.Content as Frame;
+            Frame.Navigate(Frame.Content.GetType());
+            Frame.GoBack();
+        }
 
     }
 }

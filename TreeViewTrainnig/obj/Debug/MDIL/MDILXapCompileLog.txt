@@ -2,6 +2,10 @@ Compile filter specified.  Only the following files will be processed:
 c:\users\dariuszn\documents\visual studio 2015\projects\treeviewtrainnig\treeviewtrainnig\obj\debug\msil\treeviewtrainnig.exe
 Processing file: C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\MSIL\AppxManifest.xml
 File C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\MSIL\AppxManifest.xml is not in the compile filter. Skipping.
+Processing file: C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\MSIL\Coding4Fun.Toolkit.Controls.dll
+File C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\MSIL\Coding4Fun.Toolkit.Controls.dll is not in the compile filter. Skipping.
+Processing file: C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\MSIL\Coding4Fun.Toolkit.dll
+File C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\MSIL\Coding4Fun.Toolkit.dll is not in the compile filter. Skipping.
 Processing file: C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\MSIL\GalaSoft.MvvmLight.dll
 File C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\MSIL\GalaSoft.MvvmLight.dll is not in the compile filter. Skipping.
 Processing file: C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\MSIL\GalaSoft.MvvmLight.Extras.dll

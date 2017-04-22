@@ -35,6 +35,7 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="5*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
@@ -42,9 +43,11 @@
                 <TextBlock Text="Lokalizacja" x:Name="LocalizationDisplay" Grid.Row="0" FontSize="25"/>
                 <TextBlock Text="Nazwa" Grid.Row="1" FontSize="25"/>
                 <TextBox x:Name="NewName" Grid.Row="2"/>
-                <TextBlock Grid.Row="3" Text="Zawartość" FontSize="25"/>
-                <TextBox x:Name="NoteContent" Grid.Row="4" VerticalAlignment="Stretch"/>
-                <Button x:Name="SaveButton" Grid.Row="5" Content="Zapisz" HorizontalAlignment="Stretch" 
+                <TextBlock x:Name="NoteContentTitle" Grid.Row="3" Text="Zawartość" FontSize="25"/>
+                <TextBox  x:Name="NoteContent" Grid.Row="4" VerticalAlignment="Stretch"
+                         TextWrapping="Wrap"/>
+                <ComboBox x:Name="ColorListCB" Grid.Row="5" />
+                <Button x:Name="SaveButton" Grid.Row="6" Content="Zapisz" HorizontalAlignment="Stretch" 
                         VerticalAlignment="Bottom" Click="SaveButton_Click" Padding="10" FontSize="20"/>
             </Grid>
         </Grid>

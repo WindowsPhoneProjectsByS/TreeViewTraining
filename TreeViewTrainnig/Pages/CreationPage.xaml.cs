@@ -20,6 +20,7 @@ using Windows.UI.Popups;
 using Windows.Storage;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using Windows.UI;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -40,6 +41,7 @@ namespace TreeViewTrainnig
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += this.NavigationHelper_LoadState;
             this.navigationHelper.SaveState += this.NavigationHelper_SaveState;
+            LayoutRoot.Background = new SolidColorBrush(Colors.Coral);
         }
 
 
@@ -121,7 +123,6 @@ namespace TreeViewTrainnig
         {
             switch (TreeViewPageViewModel.capsuleInfo.type)
             {
-          
                 case ItemType.Type.Folder:
                     TitleInfo.Text = "Utwórz plik";
                     break;
@@ -145,11 +146,16 @@ namespace TreeViewTrainnig
             if (TreeViewPageViewModel.capsuleInfo.type == ItemType.Type.Main)
             {
                 NoteContent.Visibility = Visibility.Collapsed;
+                ColorListCB.Visibility = Visibility.Collapsed;
+                NoteContentTitle.Visibility = Visibility.Collapsed;
                 Debug.WriteLine("Ustawiono NoteContent.Visibility to collapsed");
             }
             else
             {
                 NoteContent.Visibility = Visibility.Visible;
+                ColorListCB.Visibility = Visibility.Visible;
+                NoteContentTitle.Visibility = Visibility.Visible;
+                initColorListCB();
                 Debug.WriteLine("Element NoteContent.Visibility pozostał bez zmian");
             }
         }
@@ -251,7 +257,16 @@ namespace TreeViewTrainnig
             await msg.ShowAsync();
         }
 
+        private void initColorListCB()
+        {
+            ColorListCB.Items.Add("Coral");
+            ColorListCB.Items.Add("Black");
+            ColorListCB.Items.Add("Aqua");
+            ColorListCB.Items.Add("Bisque");
+            ColorListCB.Items.Add("Blue");
+            ColorListCB.Items.Add("Brown");
 
-
+            ColorListCB.SelectedIndex = 0;
+        }
     }
 }

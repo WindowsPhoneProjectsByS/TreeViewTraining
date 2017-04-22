@@ -46,26 +46,26 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Border Padding="10" Grid.Column="0" Grid.Row="0">
+            <Border Padding="10,0,10,0" Grid.Column="0" Grid.Row="0">
                 <StackPanel VerticalAlignment="Center">
-                    <Button x:Name="CreateButton" Content="Dodaj" FontSize="25"
-                        Padding="10" Click="GoToCreatePage_Click" HorizontalAlignment="Stretch"/>
+                    <Button x:ConnectionId='2' x:Name="CreateButton" Content="Dodaj" FontSize="25"
+                        Padding="10"                              HorizontalAlignment="Stretch"/>
                 </StackPanel>
             </Border>
-            <Border Padding="10" Grid.Column="1" Grid.Row="0">
+            <Border Padding="10,0,10,0" Grid.Column="1" Grid.Row="0">
                 <StackPanel VerticalAlignment="Center">
                     <Button x:Name="ChangeNameButton" Content="Zmięń nazwę" FontSize="25"
                              Padding="10" HorizontalAlignment="Stretch"/>
                 </StackPanel>
             </Border>
-            <Border Padding="10" Grid.Column="0" Grid.Row="1">
+            <Border Padding="10,0,10,0" Grid.Column="0" Grid.Row="1">
                 <StackPanel VerticalAlignment="Center">
-                    <Button x:Name="DeleteButton" Content="Usuń" FontSize="25"
-                            Padding="10" HorizontalAlignment="Stretch" Click="DeleteButton_Click"/>
+                    <Button x:ConnectionId='1' x:Name="DeleteButton" Content="Usuń" FontSize="25"
+                            Padding="10" HorizontalAlignment="Stretch"                           />
                 </StackPanel>
             </Border>
-            <Border Padding="10" Grid.Column="1" Grid.Row="1">
-                <StackPanel >
+            <Border Padding="10,0,10,0" Grid.Column="1" Grid.Row="1">
+                <StackPanel VerticalAlignment="Center">
                     <Button x:Name="ShowButton" Content="Pokaż" FontSize="25"
                              Padding="10" HorizontalAlignment="Stretch"/>
                 </StackPanel>
@@ -73,3 +73,4 @@
         </Grid>
     </Grid>
 </Page>
+

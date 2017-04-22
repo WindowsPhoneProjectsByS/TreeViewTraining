@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Text.RegularExpressions;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -99,6 +100,8 @@ namespace TreeViewTrainnig.Pages
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             this.navigationHelper.OnNavigatedTo(e);
+            PrepareInfoTitles();
+            PrepareBackgroundColor();
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
@@ -107,5 +110,42 @@ namespace TreeViewTrainnig.Pages
         }
 
         #endregion
+
+        private void PrepareInfoTitles()
+        {
+            LocalizationInfo.Text = "Lokalizacja: " + PrepeareLocalizationTitle();
+            NameInfo.Text = "Nazwa: " + TreeViewPageViewModel.capsuleInfo.name;
+        }
+
+        private string PrepeareLocalizationTitle()
+        {
+            string localizationWitFileName = TreeViewPageViewModel.capsuleInfo.localization;
+            string localization = localizationWitFileName.Substring(0, localizationWitFileName.LastIndexOf("\\"));
+
+            return localization;
+            
+        }
+
+        private void PrepareBackgroundColor()
+        {
+            BackgroundColorService.ChangeBackgroundColor(LayoutRoot, TreeViewPageViewModel.capsuleInfo.localization);
+        }
+
+
+
+        private void LocalizationInfo_ContextMenuOpening(object sender, ContextMenuEventArgs e)
+        {
+
+        }
+
+        private void ModficationButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

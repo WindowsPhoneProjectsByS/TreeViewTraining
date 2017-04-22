@@ -5,7 +5,8 @@ Assets\Square71x71Logo.scale-240.png
 Assets\StoreLogo.scale-240.png
 Assets\WideLogo.scale-240.png
 App.xbf
-CreationPage.xbf
+Pages\CreationPage.xbf
+Pages\DisplayNotePage.xbf
 Pages\MainPage.xbf
 TreeViewTrainnig.xr.xml
 ReadMe.Coding4Fun.Toolkit.txt

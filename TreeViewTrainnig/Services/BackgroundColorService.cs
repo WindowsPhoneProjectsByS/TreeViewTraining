@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,21 @@ namespace TreeViewTrainnig
     {
         public static void ChangeBackgroundColor(Grid grid, String localization)
         {
-            string color = Windows.Storage.ApplicationData.Current.LocalSettings.Values[localization].ToString();
+            Debug.WriteLine("ChangeBackgroundColor()");
+            Debug.WriteLine("Odczytwanie koloru dla lokalizacji: " + localization);
+            string color = "Coral";
+
+            try
+            {
+                color = Windows.Storage.ApplicationData.Current.LocalSettings.Values[localization].ToString();
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("Nie znalziono koloru w zbiorze");
+            }
+
+            Debug.WriteLine("Wybrano kolor: " + color);
+            
             grid.Background = GetProperColorForNote(color);
         }
         
@@ -26,17 +41,17 @@ namespace TreeViewTrainnig
                 case "Black":
                     brush = new SolidColorBrush(Colors.Black);
                     break;
-                case "Aqua":
-                    brush = new SolidColorBrush(Colors.Aqua);
+                case "Cyan":
+                    brush = new SolidColorBrush(Colors.Cyan);
                     break;
-                case "Bisque":
-                    brush = new SolidColorBrush(Colors.Bisque);
+                case "Violet":
+                    brush = new SolidColorBrush(Colors.Violet);
                     break;
-                case "Blue":
-                    brush = new SolidColorBrush(Colors.Blue);
+                case "Yellow":
+                    brush = new SolidColorBrush(Colors.Yellow);
                     break;
-                case "Brown":
-                    brush = new SolidColorBrush(Colors.Brown);
+                case "SteelBlue":
+                    brush = new SolidColorBrush(Colors.SteelBlue);
                     break;
                 default:
                     brush = new SolidColorBrush(Colors.Coral);

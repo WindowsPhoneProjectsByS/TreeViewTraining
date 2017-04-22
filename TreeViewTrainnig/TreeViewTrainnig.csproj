@@ -83,13 +83,16 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="BindableBase.cs" />
-    <Compile Include="CapsuleInfo.cs" />
+    <Compile Include="Models\CapsuleInfo.cs" />
+    <Compile Include="Pages\DisplayNotePage.xaml.cs">
+      <DependentUpon>DisplayNotePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Services\BackgroundColorService.cs" />
     <Compile Include="Common\NavigationHelper.cs" />
     <Compile Include="Common\ObservableDictionary.cs" />
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
-    <Compile Include="CreationPage.xaml.cs">
+    <Compile Include="Pages\CreationPage.xaml.cs">
       <DependentUpon>CreationPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ItemType.cs" />
@@ -98,7 +101,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Item.cs" />
-    <Compile Include="Section.cs" />
+    <Compile Include="Models\Section.cs" />
     <Compile Include="SelectionChangedTrigger.cs" />
     <Compile Include="TreeItemModel.cs" />
     <Compile Include="TreeViewPageViewModel.cs" />
@@ -124,7 +127,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="CreationPage.xaml">
+    <Page Include="Pages\CreationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\DisplayNotePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

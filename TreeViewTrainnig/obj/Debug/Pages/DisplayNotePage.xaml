@@ -47,10 +47,11 @@
                        Text="Nazwa: " Margin="0,0,0,10"/>
             <TextBlock x:Name="ContentDisplay" TextWrapping="Wrap" 
                        Grid.Row="2" Text="Zawrtość" FontSize="20" Padding="20,10,20,10"/>
-            <Button x:Name="ModficationButton" Grid.Row="3" Content="Modyfikuj" 
-                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="ModficationButton_Click"/>
-            <Button x:Name="DeleteButton" Grid.Row="4" Content="Usuń" 
-                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="DeleteButton_Click"/>
+            <Button x:ConnectionId='1' x:Name="ModficationButton" Grid.Row="3" Content="Modyfikuj" 
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                                />
+            <Button x:ConnectionId='2' x:Name="DeleteButton" Grid.Row="4" Content="Usuń" 
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                           />
         </Grid>
     </Grid>
 </Page>
+

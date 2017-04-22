@@ -79,8 +79,11 @@
     <AppxPackagedFile Include="C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\bin\Debug\CreationPage.xbf">
-      <PackagePath>CreationPage.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\bin\Debug\Pages\CreationPage.xbf">
+      <PackagePath>Pages\CreationPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\bin\Debug\Pages\DisplayNotePage.xbf">
+      <PackagePath>Pages\DisplayNotePage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\bin\Debug\Pages\MainPage.xbf">
       <PackagePath>Pages\MainPage.xbf</PackagePath>

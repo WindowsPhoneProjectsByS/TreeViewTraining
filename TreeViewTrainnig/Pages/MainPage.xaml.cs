@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
+using TreeViewTrainnig.Pages;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Storage;
@@ -187,5 +188,17 @@ namespace TreeViewTrainnig
             Frame.GoBack();
         }
 
+        private async void ShowButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (TreeViewPageViewModel.capsuleInfo.type == ItemType.Type.File)
+            {
+                Frame.Navigate(typeof(DisplayNotePage));
+            }
+            else
+            {
+                MessageDialog msg = new MessageDialog("Niedozwolona opcja dla folderu.");
+                await msg.ShowAsync();
+            }
+        }
     }
 }

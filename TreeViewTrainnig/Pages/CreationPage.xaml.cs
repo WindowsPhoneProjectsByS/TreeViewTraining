@@ -204,9 +204,12 @@ namespace TreeViewTrainnig
             try
             {
                 string newName = NewName.Text + ".txt";
-                StorageFile file = await folder.CreateFileAsync(newName);
+                StorageFile file = await folder.CreateFileAsync(newName, CreationCollisionOption.ReplaceExisting);
                 DisplayWarningMessage("Utworzono plik");
                 await FileIO.WriteTextAsync(file, NoteContent.Text);
+
+                SaveColorForNote();
+
             }
             catch (Exception e)
             {
@@ -251,6 +254,17 @@ namespace TreeViewTrainnig
             return condition;
         }
 
+        private void SaveColorForNote()
+        {
+            Debug.WriteLine("SaveColorForNote()");
+            string color = ColorListCB.SelectedItem.ToString();
+            Debug.WriteLine("Wybrano kolor dla notki: " + color);
+            string localization = TreeViewPageViewModel.capsuleInfo.localization + "\\" + NewName.Text + ".txt";
+            Debug.WriteLine("Zapisywanie koloru dla lokalizacji: " + localization);
+            BackgroundColorService.SaveBackGroundColorForNote(localization , color);
+            Debug.WriteLine("Zapisano kolor");
+        }
+
         private async void DisplayWarningMessage(string text)
         {
             MessageDialog msg = new MessageDialog(text);
@@ -261,10 +275,10 @@ namespace TreeViewTrainnig
         {
             ColorListCB.Items.Add("Coral");
             ColorListCB.Items.Add("Black");
-            ColorListCB.Items.Add("Aqua");
-            ColorListCB.Items.Add("Bisque");
-            ColorListCB.Items.Add("Blue");
-            ColorListCB.Items.Add("Brown");
+            ColorListCB.Items.Add("Cyan");
+            ColorListCB.Items.Add("Violet");
+            ColorListCB.Items.Add("Yellow");
+            ColorListCB.Items.Add("SteelBlue");
 
             ColorListCB.SelectedIndex = 0;
         }

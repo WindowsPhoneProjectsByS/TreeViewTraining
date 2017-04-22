@@ -103,6 +103,8 @@
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\Section.cs" />
     <Compile Include="SelectionChangedTrigger.cs" />
+    <Compile Include="Services\FileOperationService.cs" />
+    <Compile Include="Services\TitleService.cs" />
     <Compile Include="TreeItemModel.cs" />
     <Compile Include="TreeViewPageViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />

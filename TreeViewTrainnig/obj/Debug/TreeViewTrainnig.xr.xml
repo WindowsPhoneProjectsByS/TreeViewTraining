@@ -45,12 +45,13 @@
       <RootProperty Name="Style" />
       <RootProperty Name="Margin" />
       <RootProperty Name="CharacterSpacing" />
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="Padding" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Padding" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox" />
     <RootType FullName="Windows.UI.Xaml.Controls.Button">

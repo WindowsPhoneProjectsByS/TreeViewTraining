@@ -16,6 +16,9 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Text.RegularExpressions;
+using TreeViewTrainnig.Services;
+using Windows.UI.Popups;
+using System.Threading.Tasks;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -28,6 +31,9 @@ namespace TreeViewTrainnig.Pages
     {
         private NavigationHelper navigationHelper;
         private ObservableDictionary defaultViewModel = new ObservableDictionary();
+        private TitleService titleService = new TitleService();
+        private FileOperationService fileService = new FileOperationService();
+        private int saveModClickCount = 0;
 
         public DisplayNotePage()
         {
@@ -100,38 +106,24 @@ namespace TreeViewTrainnig.Pages
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             this.navigationHelper.OnNavigatedTo(e);
-            PrepareInfoTitles();
-            PrepareBackgroundColor();
+            titleService.PrepareInfoTitles(LocalizationInfo, NameInfo);
+            BackgroundColorService.ChangeBackgroundColor(LayoutRoot, TreeViewPageViewModel.capsuleInfo.localization);
+            ContentDisplay.IsEnabled = false;
+            LoadContentOfNote();
         }
 
+        private async void LoadContentOfNote()
+        {
+            await fileService.LoadFileToView(ContentDisplay);
+        }
+
+        
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
             this.navigationHelper.OnNavigatedFrom(e);
         }
 
         #endregion
-
-        private void PrepareInfoTitles()
-        {
-            LocalizationInfo.Text = "Lokalizacja: " + PrepeareLocalizationTitle();
-            NameInfo.Text = "Nazwa: " + TreeViewPageViewModel.capsuleInfo.name;
-        }
-
-        private string PrepeareLocalizationTitle()
-        {
-            string localizationWitFileName = TreeViewPageViewModel.capsuleInfo.localization;
-            string localization = localizationWitFileName.Substring(0, localizationWitFileName.LastIndexOf("\\"));
-
-            return localization;
-            
-        }
-
-        private void PrepareBackgroundColor()
-        {
-            BackgroundColorService.ChangeBackgroundColor(LayoutRoot, TreeViewPageViewModel.capsuleInfo.localization);
-        }
-
-
 
         private void LocalizationInfo_ContextMenuOpening(object sender, ContextMenuEventArgs e)
         {
@@ -140,12 +132,66 @@ namespace TreeViewTrainnig.Pages
 
         private void ModficationButton_Click(object sender, RoutedEventArgs e)
         {
+            ChangeModificationButtonTitle();
+            SaveOrNotToFile();
+            ChangeSaveModClickCount();
+        }
 
+        private void ChangeModificationButtonTitle()
+        {
+            if (saveModClickCount == 0)
+            {
+                ModficationButton.Content = "Zapisz";
+                ContentDisplay.IsEnabled = true;
+            }
+            
+        }
+
+        private async void SaveOrNotToFile()
+        {
+            if (saveModClickCount == 1)
+            {
+                bool success = await fileService.SaveFromViewToFile(ContentDisplay);
+                if (!success)
+                {
+                    MessageDialog msg = new MessageDialog("Zmiany nie zostały wprowadzone");
+                    await msg.ShowAsync();
+                }
+            }
+        }
+
+        private void ChangeSaveModClickCount()
+        {
+            if (saveModClickCount == 1)
+            {
+                saveModClickCount = 0;
+                ModficationButton.Content = "Modyfikuj";
+                ContentDisplay.IsEnabled = false;
+            }
+            else
+            {
+                saveModClickCount++;
+            }
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-
+            DeleteFile();
         }
+
+        private async void DeleteFile()
+        {
+            bool success = await fileService.DeleteFile();
+            if (!success)
+            {
+                MessageDialog msg = new MessageDialog("Nie udało się usunąć pliku");
+                await msg.ShowAsync();
+            }
+            else
+            {
+                Frame.Navigate(typeof(MainPage));
+            }
+        }
+
     }
 }

@@ -200,5 +200,10 @@ namespace TreeViewTrainnig
                 await msg.ShowAsync();
             }
         }
+
+        private void ChangeNameButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ChangeNamePage));
+        }
     }
 }

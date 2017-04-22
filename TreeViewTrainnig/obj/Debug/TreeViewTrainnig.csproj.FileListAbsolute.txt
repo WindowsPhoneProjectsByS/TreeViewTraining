@@ -68,6 +68,11 @@ C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeVie
 C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\Pages\CreationPage.xbf
 C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\Pages\DisplayNotePage.xaml
 C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\Pages\DisplayNotePage.xbf
+C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\bin\Debug\Pages\ChangeNamePage.xbf
+C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\Pages\ChangeNamePage.g.i.cs
+C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\Pages\ChangeNamePage.g.cs
+C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\Pages\ChangeNamePage.xaml
+C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\Pages\ChangeNamePage.xbf
 C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles
 C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\Microsoft.Practices.ServiceLocation\layout.resfiles.intermediate
 C:\Users\DariuszN\documents\visual studio 2015\Projects\TreeViewTrainnig\TreeViewTrainnig\obj\Debug\Microsoft.Practices.ServiceLocation\Resources.resfiles

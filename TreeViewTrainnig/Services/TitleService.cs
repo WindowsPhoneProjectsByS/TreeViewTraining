@@ -15,7 +15,7 @@ namespace TreeViewTrainnig.Services
             nameInfo.Text = "Nazwa: " + TreeViewPageViewModel.capsuleInfo.name;
         }
 
-        private string PrepeareLocalizationTitle()
+        public static string PrepeareLocalizationTitle()
         {
             string localizationWitFileName = TreeViewPageViewModel.capsuleInfo.localization;
             string localization = localizationWitFileName.Substring(0, localizationWitFileName.LastIndexOf("\\"));

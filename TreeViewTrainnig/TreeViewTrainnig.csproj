@@ -84,6 +84,9 @@
     </Compile>
     <Compile Include="BindableBase.cs" />
     <Compile Include="Models\CapsuleInfo.cs" />
+    <Compile Include="Pages\ChangeNamePage.xaml.cs">
+      <DependentUpon>ChangeNamePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\DisplayNotePage.xaml.cs">
       <DependentUpon>DisplayNotePage.xaml</DependentUpon>
     </Compile>
@@ -129,6 +132,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Pages\ChangeNamePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\CreationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

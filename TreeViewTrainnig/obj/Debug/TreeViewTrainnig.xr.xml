@@ -53,7 +53,6 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="Padding" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox" />
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
       <RootProperty Name="HorizontalAlignment" />
@@ -62,6 +61,8 @@
       <RootProperty Name="FontSize" />
       <RootEvent Name="Click" />
     </RootType>
+    <RootType FullName="TreeViewTrainnig.Pages.ChangeNamePage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox" />
     <RootType FullName="TreeViewTrainnig.CreationPage" />
     <RootType FullName="TreeViewTrainnig.Pages.DisplayNotePage" />
     <RootType FullName="TreeViewTrainnig.TreeViewPageViewModel" />
